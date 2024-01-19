@@ -1,36 +1,57 @@
-.body{
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    font-family:'Times New Roman', Times, serif;
+    background-color: rgb(232, 233, 240);
+}
+
+.controls{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0px 200px;
-}
-.container{
-    display: flex;
-    flex-direction: column;
-}
-.controls{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    gap: 10px;
 }
 
 .nav-button{
-    margin: 5px;
+    margin: 10px;
+    background-color: rgb(214, 240, 219);
+    font-size: 16px;
+    color: #414141;
+    border-radius: 8px;
+    padding: 8px 14px;
+    border: 1px solid rgb(121, 236, 115);
 }
 .grid{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     border: 1px solid grey;
+    background-color: white;
+    margin: 0px auto 10px;
 }
 
 .gridDiv{
-    flex: 1 1 calc(3.33% - 20px);
-    height: auto;
-    aspect-ratio: 1/1;
     border: 1px solid grey;
-    box-sizing: border-box;
-    padding: 20px;
+}
+
+.slider-container{
+    margin: 0 auto;
+}
+
+.slider{
+    appearance: none;
+    height: 25px;
+    width: 100%;
+    background: rgba(200, 255, 238, 0.726);
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    flex: 1;
+}
+
+.slider-value{
+    margin: 0 auto;
+    text-align: center;
 }
