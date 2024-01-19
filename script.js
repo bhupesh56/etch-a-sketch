@@ -5,6 +5,8 @@ const grid = document.querySelector('.grid');
 const sliderContainer = document.querySelector('.slider-container');
 const slider = document.querySelector('.slider');
 const sliderValue = document.querySelector('.slider-value');
+const clearBtn = document.querySelector('#clear');
+const eraserBtn = document.querySelector('#eraser');
 
 sliderValue.textContent = `${slider.value} x ${slider.value} (Resolution)`;
 grid.style.width = grid.style.height = `${GRID_SIDE}px`;
@@ -34,5 +36,10 @@ slider.oninput = function(){
     createGrid(this.value);
     console.log("hii");
 }
+
+clearBtn.addEventListener("click", ()=>{
+    removeGrid();
+    createGrid(col);
+})
 
 createGrid(col);
